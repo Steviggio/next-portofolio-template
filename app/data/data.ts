@@ -1,10 +1,16 @@
 import { Github, Linkedin } from "./svgs";
 
 export const datas = {
-  name: "Steviggio",
+  name: "Steve Mothmora",
+  nickname: "Steviggio",
   title: "Développeur Fullstack JS",
   about:
     "Développeur JavaScript, passionné de langues et de développement, j'aime prendre part à des projets innovants mélant créativité et modernité.",
+  description:
+    "Je suis Steviggio, un développeur Fullstack JS spécialisé dans les technologies modernes telles que Next.js, React, et Node.js. Avec une passion pour la création d'applications web performantes et intuitives, je m'efforce de transformer des idées innovantes en solutions numériques concrètes. En plus de mes compétences techniques, j'ai un intérêt marqué pour les langues et la communication interculturelle, ce qui enrichit ma perspective dans le développement de projets globaux.",
+  age: 29,
+  location: "Orléans, France",
+  role: "Développeur Fullstack JS",
   projects: [
     {
       title: "Polypost",
@@ -30,6 +36,27 @@ export const datas = {
       description: "Le site sur lequel vous naviguez actuellement.",
       link: "https://github.com/Steviggio/next-portfolio",
       active: true,
+    },
+    {
+      title: "Ganatan",
+      description: "Plateforme de formation Fullstack Angular/Node.",
+      link: "https://ganatan.com",
+      active: true,
+      company: "Ganatan",
+    },
+    {
+      title: "Qobook",
+      description: "Librairie mobile pour découvrir et lire des livres.",
+      link: "https://qobook.app",
+      active: true,
+      company: "Efficience Digitale",
+    },
+    {
+      title: "365fois plus de laicité",
+      description: "Application native de sensibilisation à la laïcité.",
+      link: "https://365fois.com",
+      active: true,
+      company: "365fois",
     },
   ],
   experiences: [
@@ -61,3 +88,18 @@ export const datas = {
   ],
   resumeUrl: "/Mothmora_2026.pdf",
 };
+
+export const technologies = [
+  {
+    javascript: [
+      "React.js",
+      "React Native",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+    ],
+    python: ["Django", "Flask"],
+    databases: ["MongoDB", "PostgreSQL", "MySQL"],
+    devops: ["Docker", "Jenkins", "AWS", "Nginx"],
+  },
+];

@@ -1,7 +1,22 @@
 import { ThemeToggle } from "@/app/components/theme-toggle";
 import { ArrowUpRight, FileText } from "lucide-react";
 import { datas as DATA } from "./data/data";
+import Image from "next/image";
 import Link from "next/link";
+import PresentationCard from "./components/PresentationCard";
+
+function companyLogo(company: string) {
+  switch (company) {
+    case "Efficience Digitale":
+      return "/efficience-logo.png";
+    case "Ganatan":
+      return "/ganatan-logo.png";
+    default:
+      return "/default-logo.png";
+    case "365fois":
+      return "/365fois-logo.png";
+  }
+}
 
 export default function Home() {
   return (
@@ -10,19 +25,27 @@ export default function Home() {
         {/* HEADER */}
         <header className="flex justify-between items-center mb-16">
           <h1 className="font-bold text-xl tracking-tight text-sage dark:text-cream">
-            {DATA.name}
+            {DATA.nickname}
           </h1>
           <ThemeToggle />
         </header>
 
         {/* HERO / ABOUT */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-4 tracking-tight text-sage dark:text-sage-light">
-            {DATA.title}
-          </h2>
-          <p className="text-sage dark:text-neutral-400 leading-relaxed text-lg">
-            {DATA.about}
-          </p>
+        <section className="mb-16 flex flex-col gap-5">
+          <PresentationCard
+            title={DATA.name}
+            image="/steve.jpg"
+            location={DATA.location}
+            role={DATA.role}
+          />
+          {/* <div>
+            <h2 className="text-3xl font-bold mb-4 tracking-tight text-sage dark:text-sage-light">
+              {DATA.title}
+            </h2>
+            <p className="text-sage dark:text-neutral-400 leading-relaxed text-lg">
+              {DATA.about}
+            </p>
+          </div> */}
         </section>
 
         {/* PROJETS */}
@@ -32,25 +55,67 @@ export default function Home() {
             Projets Sélectionnés
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {DATA.projects.map((project, index) => (
-              <a
-                key={index}
-                href={`${project.active ? project.link : ""}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${project.active ? "border-sage" : "border-gray-200 dark:border-0 pointer-events-none  "} group block p-5 border border-sage/20 dark:border-neutral-800 rounded-lg bg-cream-dark/30 dark:bg-neutral-900/50 hover:border-sage hover:bg-white dark:hover:border-sage-light dark:hover:bg-neutral-900 transition-all duration-300 select-none`}
-              >
-                <div className="flex justify-between items-start mb-3">
-                  <h4 className="font-medium text-sage-dark dark:text-cream group-hover:text-sage transition-colors">
-                    {project.title}
-                  </h4>
-                  <ArrowUpRight className="h-4 w-4 text-sage/60 group-hover:text-sage group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-                </div>
-                <p className="text-sm text-sage/80 dark:text-neutral-400 leading-relaxed">
-                  {project.description}
-                </p>
-              </a>
-            ))}
+            {DATA.projects.map(
+              (project, index) =>
+                !project.company && (
+                  <a
+                    key={index}
+                    href={`${project.active ? project.link : ""}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${project.active ? "border-sage" : "border-gray-200 dark:border-0 pointer-events-none  "} group block p-5 border border-sage/20 dark:border-neutral-800 rounded-lg bg-cream-dark/30 dark:bg-neutral-900/50 hover:border-sage hover:bg-white dark:hover:border-sage-light dark:hover:bg-neutral-900 transition-all duration-300 select-none`}
+                  >
+                    <div className="flex justify-between items-start mb-3">
+                      <h4 className="font-medium text-sage-dark dark:text-cream group-hover:text-sage transition-colors">
+                        {project.title}
+                      </h4>
+                      <ArrowUpRight className="h-4 w-4 text-sage/60 group-hover:text-sage group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                    </div>
+                    <p className="text-sm text-sage/80 dark:text-neutral-400 leading-relaxed">
+                      {project.description}
+                    </p>
+                  </a>
+                ),
+            )}
+          </div>
+          <div className="flex flex-col gap-3 pt-5 ">
+            <h3 className="font-semibold text-sage-dark dark:text-cream mb-6 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-sage"></span>
+              Projets en entreprise
+            </h3>
+            <div className="flex gap-3">
+              {DATA.projects.map(
+                (project, index) =>
+                  project.company && (
+                    <a
+                      key={index}
+                      href={`${project.active ? project.link : ""}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${project.active ? "border-sage" : "border-gray-200 dark:border-0 pointer-events-none  "} group block p-5 border border-sage/20 dark:border-neutral-800 rounded-lg bg-cream-dark/30 dark:bg-neutral-900/50 hover:border-sage hover:bg-white dark:hover:border-sage-light dark:hover:bg-neutral-900 transition-all duration-300 select-none`}
+                    >
+                      <div className="flex relative justify-between items-start mb-3">
+                        <Image
+                          src={companyLogo(project.company)}
+                          alt={`Logo ${project.company}`}
+                          width={25}
+                          height={25}
+                          className="rounded-xl object-contain absolute -top-[1.6rem] animate-heartbeat -left-6 opacity-85"
+                        />
+                        <div className="flex flex-col gap-1 ">
+                          <h4 className="font-medium text-sage-dark dark:text-cream group-hover:text-sage transition-colors">
+                            {project.title}
+                          </h4>
+                        </div>
+                        <ArrowUpRight className="h-4 w-4 text-sage/60 group-hover:text-sage group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                      </div>
+                      <p className="text-sm text-sage/80 dark:text-neutral-400 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </a>
+                  ),
+              )}
+            </div>
           </div>
         </section>
 
