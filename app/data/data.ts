@@ -3,7 +3,7 @@ import { Github, Linkedin } from "./svgs";
 export const datas = {
   name: "Steve Mothmora",
   nickname: "Steviggio",
-  title: "Développeur Fullstack JS",
+  title: "Développeur JS | React.js / Node.js",
   about:
     "Développeur JavaScript, passionné de langues et de développement, j'aime prendre part à des projets innovants mélant créativité et modernité.",
   description:
@@ -24,6 +24,7 @@ export const datas = {
         "Template E-commerce 'Headless' optimisé pour la performance.",
       link: "https://github.com/Steviggio/eshop-template",
       active: true,
+      
     },
     {
       title: "Speakio",
@@ -36,6 +37,7 @@ export const datas = {
       description: "Le site sur lequel vous naviguez actuellement.",
       link: "https://github.com/Steviggio/next-portfolio",
       active: true,
+      // tech: ["Next.js", "Tailwind CSS", "TypeScript"],
     },
     {
       title: "Ganatan",
@@ -43,6 +45,7 @@ export const datas = {
       link: "https://ganatan.com",
       active: true,
       company: "Ganatan",
+      tech: ["Angular", "Node.js"],
     },
     {
       title: "Qobook",
@@ -50,6 +53,7 @@ export const datas = {
       link: "https://qobook.app",
       active: true,
       company: "Efficience Digitale",
+      tech: ["React Native", "Redux Toolkit", "Supabase"],
     },
     {
       title: "365fois plus de laicité",
@@ -57,6 +61,7 @@ export const datas = {
       link: "https://365fois.com",
       active: true,
       company: "365fois",
+      tech: ["React Native", "Redux Toolkit", "Strapi", "Mistral AI"],
     },
   ],
   experiences: [
