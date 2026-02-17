@@ -11,7 +11,7 @@ export const RAW_DATA = {
       "Je suis Steviggio, un développeur Fullstack JS spécialisé dans les technologies modernes telles que Next.js, React, et Node.js. Avec une passion pour la création d'applications web performantes et intuitives, je m'efforce de transformer des idées innovantes en solutions numériques concrètes. En plus de mes compétences techniques, j'ai un intérêt marqué pour les langues et la communication interculturelle, ce qui enrichit ma perspective dans le développement de projets globaux.",
     location: "Orléans, France",
     role: "Développeur Fullstack JS",
-    resumeUrl: "/Mothmora_2025.pdf",
+    resumeUrl: "/CV_Mothmora_2026.pdf",
     avatarUrl: "/steve.jpg",
   },
   socials: [
@@ -62,7 +62,7 @@ export const RAW_DATA = {
       active: true,
       companyLogoUrl: "/ganatan-logo.png",
       company: "Ganatan",
-      tech: ["Angular", "Node.js"],
+      tech: ["React", "Angular", "Node.js"],
       isSideProject: false,
     },
     {
