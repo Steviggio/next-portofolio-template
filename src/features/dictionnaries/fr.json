@@ -1,0 +1,74 @@
+{
+    "metadata": {
+        "title": "Portfolio de Steve Mothmora - Développeur Fullstack JS",
+        "description": "Découvrez le portfolio de Steve Mothmora, un développeur Fullstack JS spécialisé dans les technologies modernes telles que Next.js, React, et Node.js. Explorez ses projets innovants et ses compétences en développement web."
+    },
+    "home": {
+        "title": "Bienvenue sur mon portfolio",
+        "description": "Découvrez mes projets et compétences en développement web."
+    },
+    "profile": {
+        "name": "Steve Mothmora",
+        "nickname": "Steviggio",
+        "title": "Développeur JS | React.js / Node.js",
+        "about": "Développeur JavaScript, passionné de langues et de développement, j'aime prendre part à des projets innovants mélant créativité et modernité.",
+        "description": "Je suis Steviggio, un développeur Fullstack JS spécialisé dans les technologies modernes telles que Next.js, React, et Node.js. Avec une passion pour la création d'applications web performantes et intuitives, je m'efforce de transformer des idées innovantes en solutions numériques concrètes. En plus de mes compétences techniques, j'ai un intérêt marqué pour les langues et la communication interculturelle, ce qui enrichit ma perspective dans le développement de projets globaux.",
+        "location": "Orléans, France",
+        "role": "Développeur Fullstack JS"
+    },
+    "about": {
+        "title": "À propos de moi",
+        "description": "Je suis un développeur passionné avec une expérience dans la création d'applications web modernes."
+    },
+    "projects": {
+        "informations": {
+            "polypost": {
+                "title": "Polypost",
+                "description": "Tableau de bord temps réel avec Next.js 14 et Tremor."
+            },
+            "eshop-template": {
+                "title": "Eshop Template",
+                "description": "Template e-commerce construit avec Next.js 14 et Tailwind CSS."
+            },
+            "speakio": {
+                "title": "Speakio",
+                "description": "Plateforme de ressources permettant l'apprentissage des langues."
+            },
+            "portfolio": {
+                "title": "Portfolio",
+                "description": "Mon portfolio personnel, construit avec Next.js 14 et Tailwind CSS."
+            },
+            "ganatan": {
+                "title": "Ganatan",
+                "description": "Plateforme de ressources pour l'apprentissage des langues."
+            },
+            "qobook": {
+                "title": "Qobook",
+                "description": "Plateforme de ressources pour l'apprentissage des langues."
+            },
+            "365fois": {
+                "title": "365 fois plus de laïcité",
+                "description": "Plateforme de ressources pour l'apprentissage des langues."
+            },
+            "questitution": {
+                "title": "Questitution",
+                "description": "Un jeu en collaboration avec le ministère de l'éducation pour apprendre la constition française au travers d'un quizz.."
+            },
+            "jetulis": {
+                "title": "Jetulis",
+                "description": "Une application mobile proposant une expérience de lecture immersive pour les enfants, avec des fonctionnalités de personnalisation et d'interactivité."
+            }
+        }
+    },
+    "experiences": {
+        "role": {
+            "efficience": "Développeur Front-end",
+            "ganatan": "Développeur Fullstack",
+            "freelance": "Développeur Fullstack JS"
+        }
+    },
+    "contact": {
+        "title": "Contactez-moi",
+        "description": "N'hésitez pas à me contacter pour toute question ou collaboration."
+    }
+}
