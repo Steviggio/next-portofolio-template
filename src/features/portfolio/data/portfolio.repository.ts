@@ -120,7 +120,7 @@ export const RAW_DATA = {
         "Une application mobile proposant une expérience de lecture immersive pour les enfants, avec des fonctionnalités de personnalisation et d'interactivité.",
       link: "https://jetulis.fr/",
       active: true,
-      tech: ["React Native", "Redux Toolkit", "Strapi", "Mistral AI"],
+      tech: ["React Native", "Redux Toolkit", "Supabase"],
       companyLogoUrl: "/jetulis-logo.png",
       company: "Efficience Digitale",
       isSideProject: false,
