@@ -10,6 +10,7 @@ export const SocialLinkSchema = z.object({
 });
 
 export const ProjectSchema = z.object({
+  id: z.string(),
   title: z.string().min(1),
   description: z.string(),
   link: z.url(),
@@ -21,6 +22,7 @@ export const ProjectSchema = z.object({
 });
 
 export const ExperienceSchema = z.object({
+  id: z.string(),
   company: z.string(),
   role: z.string(),
   date: z.string(), // Pourrait être z.date() mais string est plus simple pour l'affichage tel quel
