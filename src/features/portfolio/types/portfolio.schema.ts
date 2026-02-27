@@ -15,7 +15,7 @@ export const ProjectSchema = z.object({
   company: z.string().optional(),
   companyLogoUrl: z.string().optional(),
   tech: z.array(z.string()).default([]),
-  isSideProject: z.boolean().default(false), 
+  isSideProject: z.boolean().default(false),
 });
 
 export const ExperienceSchema = z.object({
@@ -37,6 +37,8 @@ export const ProfileSchema = z.object({
   role: z.string(),
   resumeUrl: z.string(),
   avatarUrl: z.string(),
+  email: z.email(),
+  status: z.enum(["available", "busy"]).default("available"),
 });
 
 export const PortfolioDataSchema = z
@@ -45,6 +47,7 @@ export const PortfolioDataSchema = z
     socials: z.array(SocialLinkSchema),
     projects: z.array(ProjectSchema),
     experiences: z.array(ExperienceSchema),
+    sections: z.record(z.string(), z.string()),
   })
   .readonly();
 

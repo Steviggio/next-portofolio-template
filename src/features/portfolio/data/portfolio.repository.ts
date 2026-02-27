@@ -5,6 +5,7 @@ import { getDictionnary } from "@/app/[lang]/dictionnaries";
 export const RAW_DATA = {
   lang: "fr",
   profile: {
+    status: "available",
     name: "Steve Mothmora",
     nickname: "Steviggio",
     title: "Développeur JS | React.js / Node.js",
@@ -16,6 +17,7 @@ export const RAW_DATA = {
     role: "Développeur Fullstack JS",
     resumeUrl: "/CV_Mothmora_2026.pdf",
     avatarUrl: "/steve.jpg",
+    email: "steviggio@gmail.com",
   },
   socials: [
     { name: "GitHub", url: "https://github.com/Steviggio", iconName: "github" },
@@ -181,6 +183,7 @@ export class PortfolioRepository {
           role: dict.profile.role,
           location: dict.profile.location,
         },
+        sections: dict.sections,
         projects: RAW_DATA.projects.map((project) => {
           const translation =
             dict.projects.informations[
