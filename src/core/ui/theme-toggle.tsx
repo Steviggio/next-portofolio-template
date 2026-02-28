@@ -9,18 +9,17 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
-  // Évite l'erreur d'hydratation (le thème n'est connu que côté client)
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    return <div className="h-9 w-9" />; // Placeholder de la taille du bouton
+    return <div className="h-9 w-9" />;
   }
 
   return (
     <Button
-      variant="ghost" // On utilise notre variante 'ghost' ou 'outline'
+      variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800"

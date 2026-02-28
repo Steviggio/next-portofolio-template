@@ -1,10 +1,6 @@
 import * as React from "react";
 import { cn } from "@/core/lib/cn";
 
-/**
- * Card Component
- * Container principal avec bordures et background adaptatif (Dark/Light)
- */
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -13,7 +9,7 @@ const Card = React.forwardRef<
     ref={ref}
     className={cn(
       "rounded-xl border bg-card text-card-foreground shadow-sm",
-      "bg-cream-dark/30 dark:bg-neutral-900/50", // Tes couleurs personnalisées
+      "bg-cream-dark/30 dark:bg-neutral-900/50",
       "border-sage/20 dark:border-neutral-800",
       className,
     )}
@@ -22,10 +18,6 @@ const Card = React.forwardRef<
 ));
 Card.displayName = "Card";
 
-/**
- * CardHeader
- * Section du haut (Titre, Icone, Méta-données)
- */
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -38,10 +30,6 @@ const CardHeader = React.forwardRef<
 ));
 CardHeader.displayName = "CardHeader";
 
-/**
- * CardTitle
- * Typographie standardisée pour les titres de cartes
- */
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
@@ -57,10 +45,6 @@ const CardTitle = React.forwardRef<
 ));
 CardTitle.displayName = "CardTitle";
 
-/**
- * CardContent
- * Contenu principal (Description, Tags)
- */
 const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -69,10 +53,6 @@ const CardContent = React.forwardRef<
 ));
 CardContent.displayName = "CardContent";
 
-/**
- * CardFooter
- * Actions (Liens, Boutons)
- */
 const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>

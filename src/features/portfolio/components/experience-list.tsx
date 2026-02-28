@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { cn } from "@/core/lib/cn";
 import type { Experience } from "../types/portfolio.schema";
 
 interface ExperienceListProps {
@@ -11,7 +10,6 @@ export function ExperienceList({ experiences }: ExperienceListProps) {
     <div className="ml-1 space-y-8 border-l-2 border-sage/20 pl-6">
       {experiences.map((exp, index) => (
         <div key={`${exp.company}-${index}`} className="group relative">
-          {/* Point de timeline */}
           <span className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-cream bg-sage/40 transition-colors group-hover:bg-sage dark:border-neutral-950" />
 
           <div className="flex flex-col justify-between sm:flex-row sm:items-baseline">

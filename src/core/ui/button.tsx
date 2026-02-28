@@ -3,7 +3,6 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/core/lib/cn";
 
-// Définition des variantes avec CVA (Configuration centralisée des styles)
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
@@ -43,7 +42,6 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
-    // Si asChild est true, le composant fusionne ses props avec l'enfant (utile pour les Tooltips ou Next/Link)
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
