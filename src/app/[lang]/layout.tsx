@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionnary(lang);
-  const baseUrl = "https://www.steviggio.fr";
+  const baseUrl = "https://your-domain.com";
 
   return {
     title: dict.metadata.title,
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: dict.metadata.title,
       description: dict.metadata.description,
-      url: `https://www.steviggio.fr/${lang}`,
-      siteName: "Steviggio Portfolio",
+      url: `${baseUrl}/${lang}`,
+      siteName: "Portfolio Template",
       locale: lang,
       type: "website",
       images: [
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: dict.metadata.title,
       description: dict.metadata.description,
-      creator: "@steviggio",
+      creator: "@yourhandle",
       images: [`${baseUrl}/og-image.jpg`],
     },
     alternates: {

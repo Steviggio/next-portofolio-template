@@ -1,7 +1,10 @@
 {
-  "name": "portfo-test",
-  "version": "0.1.0",
-  "private": true,
+  "name": "next-portfolio-template",
+  "version": "1.0.0",
+  "description": "A modern, lightweight Next.js portfolio template featuring i18n, Zod parsing, and a beautiful dark mode.",
+  "author": "Your Name <your@email.com>",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
